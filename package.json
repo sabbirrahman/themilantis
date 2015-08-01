@@ -1,0 +1,23 @@
+{
+  "main": "index.html",
+  "name": "The Milantis",
+  "description": "The Milantis is the old classic puzzle game in which you just have to solve the picture. This game is called 'Milantis' by the people of rural Bangladesh. 'Milantis' is a Bengali word used by these people. Try to solve the puzzle as quickly as possible to see how fast your brain works & also try to solve in as less move as you can. The score is determine by summing up the seconds spent and moves needed to solve the puzzle.",
+  "version": "0.9.1",
+  "keywords": [ "games", "puzzle" ],
+  "window": {
+    "title": "The Milantis",
+    "icon": "img/logo.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 560,
+    "height": 660,
+    "position": "mouse",
+    "min_width": 560,
+    "min_height": 660,
+    "max_width": 1366,
+    "max_height": 768
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

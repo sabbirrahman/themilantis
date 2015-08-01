@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> 	<![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8">		<![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> 		<![endif]-->
+<!--[if gt IE 8]><!-->
+<html id="html" class="">
+<!--<![endif]-->
+
+<head>
+	<title>The Milantis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="img/128x128.png" />
+	<!--[if lt IE 9]>
+	<script src="scripts/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body id="mainContainer">
+	<!-- Splash Screen -->
+	<div id="splash">
+		<div id="logo" class="logo"></div>
+		<footer>2014 © All rights reserved<br/>
+		Developed by Md. Sabbir Rahman</footer>
+	</div>
+	<!-- End of Splash Screen -->
+
+
+	<!-- Menu Screen -->
+	<div id="menu" class="menu">
+		<div id="logo" class="logo"></div>
+		<nav id="nav">
+			<ul>
+				<li id="playButton">Play</li>
+				<li id="resumeButton">Resume</li>
+				<li id="settingsButton">Settings</li>
+				<li id="aboutButton">About</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- End of Menu Screen -->
+
+
+	<!-- Game Screen -->
+	<div id="game" class="game">
+		<header>
+			<div> <span>Time:</span> <span id="time"></span> </div>
+			<div> <span>Move:</span> <span id="move"></span> </div>
+		</header>
+		<span id="showHighscore" class="showHighscore"></span>
+
+		<main>
+			<div id="wraper" class="wraper">
+				<section id="puzzleBox" class="puzzleBox"></section>
+			</div>
+			<div id="success" class="success"></div>
+		</main>
+
+		<div class="backButton icon i1"></div>
+		<div id="showImageButton" class="icon i2"></div>
+		<div id="restartButton" class="icon i3"></div>
+	</div>
+	<!-- End of Game Screen -->
+
+
+	<!-- Settings Screen -->
+	<div id="setting" class="setting">
+		<div class="backButton icon i1"></div>
+		<h3>Settings</h3>
+
+		<form id="saveSetting" action="javascript:void(0);" method="post">
+			<span class="title">Difficulty</span>
+			<div class="row" style="width: 175px">
+				<label class="settingButton">Easy  <br/><input type="radio" name="difficulty" value="0"></label>
+				<label class="settingButton">Normal<br/><input type="radio" name="difficulty" value="1"></label>
+				<label class="settingButton">Hard  <br/><input type="radio" name="difficulty" value="2"></label>
+			</div>
+
+			<span class="title">Image</span>
+			<div class="row" style="width: 233px">
+				<label class="settingButton"><div class="icon i4"></div><input type="radio" name="image" value="nfs"></label>
+				<label class="settingButton"><div class="icon i5"></div><input type="radio" name="image" value="cas"></label>
+				<label class="settingButton"><div class="icon i6"></div><input type="radio" name="image" value="art"></label>
+				<label class="settingButton"><div class="icon i7"></div><input type="radio" name="image" value="mvb"></label>
+			</div>
+
+			<div class="row" style="width: 175px">
+				<label id="soundButton" class="settingButton">Sound<div class="icon i8"></div><input id="sound" type="checkbox"></label>
+				<label id="clearButton" class="settingButton" style="height:80px;">Clear<wbr>Every<wbr>Thing</label>
+				<label id="hinstButton" class="settingButton">Hints<div class="icon i9"></div><input id="hints" type="checkbox"></label>
+			</div>
+
+			<input type="submit" value="Save" />
+		</form>
+	</div>
+	<!-- Settings Screen -->
+
+
+	<!-- About Screen -->
+	<div id="about" class="about">
+		<h3>About</h3>
+		<div class="backButton icon i1"></div>
+		<ul>
+			<li><span class="bold">About Game:</span><br>
+			The Milantis is the old classic puzzle game in which you just have to solve the picture. This game is called 'Milantis' by the people of rural Bangladesh. 'Milantis' is a Bengali word used by these people. Try to solve the puzzle as quickly as possible to see how fast your brain works &amp also try to solve in as less move as you can. The score is determine by summing up the seconds spent and moves needed to solve the puzzle.
+			</li>
+			<li><span class="bold">About Developer:</span><br>
+			Hi, my name is Md. Sabbir Rahman. I'm currently studying in B.Sc. (Engg) in CSE at Uttara University, Bangladesh at the time of the development of this game in 2014. I've developed this game just for practice purpose only. I've used HTML5, CSS3 &amp JavaScript to develop this game. Feel free to contact me if you want to say anything about this game (both complement and critic are welcome).
+			</li>
+
+			<li style="width:104px; margin: 5px auto;"><span class="bold">Contact:</span><br>
+				<a href="https://www.facebook.com/blackheartadhar" target="_blank"> <div style="display: inline-block" class="icon i10"></div></a>
+				<a href="mailto:sabbir.jassim@gmail.com" target="_blank">			<div style="display: inline-block" class="icon i11"></div></a>
+				<a href="https://programmingpathshala.wordpress.com" target="_blank">		<div style="display: inline-block" class="icon i12"></div></a>
+			</li>
+		</ul>
+	</div>
+	<!-- End of About Screen -->
+
+	
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
