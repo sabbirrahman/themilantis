@@ -14,7 +14,7 @@ The Milantis is the old classic puzzle game in which you just have to solve the 
 
 # Features
 
-* Three difficulty mode.
+* Three difficulty modes.
 * Four images to play with.
 * Sounds.
 * Hinting system which can be turned on to make the game easy.
