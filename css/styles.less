@@ -1,0 +1,372 @@
+// Styles
+@import 'normalize.less';
+
+// Variables:
+// Colors:
+@black: 		#222222;
+@white: 		#F3F3F3;
+@blue: 			#3091BA;
+@link_color:	@white;
+@link_hover:	#FEA901;
+@blue_t: 		rgba(048, 145, 186, 0.90);
+@shadow: 		rgba(000, 000, 000, 0.30);
+
+// Mixins:
+.text_shadow1 	 { text-shadow: 0 1px 0px @black; }
+.box_shadow1  	 { box-shadow: -2px 2px 0px @shadow; }
+.round(@a: 5px)  { border-radius: @a; }
+.center(@a: 0px) { margin: @a auto; }
+.gradient(@from, @to) {
+	background: 			   @from;
+	background: -webkit-linear-gradient(@from, @to);
+	background:    -moz-linear-gradient(@from, @to);
+	background:     -ms-linear-gradient(@from, @to);
+	background:      -o-linear-gradient(@from, @to);
+	background: 		linear-gradient(@from, @to);
+}
+
+// Default Settings
+@-ms-viewport {
+	width: device-width;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	        font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+html.lt-ie9 {
+	max-width: 480px;
+	margin: 0 auto;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: @link_color;
+	&:hover { color: @link_hover; }
+}
+
+body {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+	font: 1em/1.5em Georgia;
+	background: url("../img/background.jpg");
+	cursor: default;
+}
+// End of Default Settings
+
+
+// Splash Screen Styles
+.logo {
+	background: url("../img/logo.png") no-repeat;
+	background-size: 100% 100%;
+	max-height: 250px;
+	max-width: 250px;
+	margin: 0 auto;
+	display: none;
+}
+footer {
+	position: absolute;
+	text-align: center;
+	font-size: .7em;
+	color: @blue;
+	padding: 3px;
+	bottom: 0px;
+	width: 100%;
+}
+// End of Splash Screen Styles
+
+
+// Menu Styles
+.menu {
+	display: none;
+	nav { height: 140px; }
+	ul {
+		list-style: none;
+		li {
+			.button;
+			width: 220px;
+		}
+	}
+}
+// End of Menu Styles
+
+
+// Settings Screen Styles
+.setting {
+	display: none;
+	width: 100%;
+	color: @white;
+	h3 {
+		text-align: center;
+		font-size: .9em;
+		margin-top: 3px;
+	}
+	.title {
+		text-align: center;
+		font-size: .8em;
+		display: block;
+	}
+	.row {
+		.center;
+	}
+	.settingButton {
+		display: inline-block;
+		.gradient(RED, darken(RED, 35%));
+		text-align: center;
+		font-size: .7em;
+		margin: 4px 2px;
+		width: 50px;
+		.round(5px);
+		.box_shadow1;
+		&:hover { cursor: pointer; }
+		vertical-align: top;
+	}
+	input[type=submit] {
+		.button;
+		width: 220px;
+		display: block;
+		margin-top: 5px;
+	}
+}
+// End of Settings Screen Styles
+
+
+// About Screen Styles
+.about {
+	display: none;
+	color: @white;
+	h3 {
+		text-align: center;
+		margin-top: 15px;
+		font-size: 1em;
+	}
+	ul {
+		list-style: none;
+		margin: 4%;
+		li {
+			margin: 10px 0px;
+			.bold {
+				color: @blue;
+				text-shadow: 0px 1px 0px @shadow;
+			}
+		}
+	}
+}
+// End of About Screen Styles
+
+
+// Game Play Screen Styles
+// Header Styles
+header {
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+	background: rgba(102, 204, 204, 0.10);
+	font-family: Georgia;
+	line-height: 50px;
+	font-size: 0.8em;
+	color: @white;
+	height: 50px;
+	width: 100%;
+	.box_shadow1;
+}
+header div {
+	width: 50%;
+	float: left;
+}
+header div:nth-child(1) {
+	padding-left: 5%;
+	text-align: left;
+}
+header div:nth-child(2) {
+	padding-right: 5%;
+	text-align: right;
+}
+.showHighscore {
+	text-align: center;
+	display: block;
+	color: @white;
+	margin-top: 0.4%;
+}
+// End of Header Styles
+// Main Section Styles
+main {
+	position: relative;
+}
+.wraper {
+	background: @white;
+	margin: 0 auto;
+	border: 1px solid @white;
+	box-shadow: 0 0 1px 5px @shadow;
+}
+.puzzleBox {
+	background: @white;
+	box-shadow: 0 0 1px 2px @shadow;
+	margin: 9px;
+	position: relative;
+	div {
+		background: @black;
+		color: RED;
+		border: 1px solid @white;
+		text-align: center;
+		position: absolute;
+		&:hover {
+			color: @white;
+			cursor: pointer;
+		}
+	}
+	.showImage {
+		position: absolute;
+		left: 1px;
+		top: 1px;
+		z-index: 1000;
+	}
+}
+
+.game {
+	display: none;
+	.icon {
+		position: absolute;
+		bottom: 0;
+		margin-bottom: 5px;
+		&:hover { cursor: pointer; }
+	}
+	.backButton { right: 0;  margin-right: 5px; top: auto;  }
+	.icon.i2 	{ left: 50%; margin-left: -16px; }
+	.icon.i3 	{ left: 0;   margin-left: 5px;   }
+}
+.success {
+	background: rgba(102, 204, 204, 0.9);
+	color: @white;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 5px;
+	font-family: cursive;
+	font-size: 1em;
+	width: 80%;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	left: 10%;
+	top: 25%;
+	display: none;
+	z-index: 1001;
+	&:hover {
+		cursor: pointer;
+	}
+}
+// End of Main Section Styles
+// Game Play Screen Styles
+
+
+// Fluid Grid
+.row {
+	width: 100%;
+  	*zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+.columns {
+	float: left;
+}
+.columns.four 		{	width: 	33.333%		}
+.columns.three 		{	width: 	25.000%		}
+.columns.six 		{	width: 	50.000%		}
+// End of Fluid Grid
+
+// Misc
+.bold {
+	font-weight: bold;
+}
+
+.button {
+	.gradient(@blue_t, darken(@blue_t, 20%));
+	height: 35px;
+	margin-top: 15px;
+	width: 50%;
+	padding: 3px 0;
+	margin: 10px auto 0px;
+	.round(5px);
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	color: @white;
+	.text_shadow1;
+	border: 1px solid darken(@blue_t, 5%);
+	box-shadow: -2px 2px 2px @shadow,
+		  inset  0px 1px 2px lighten(@blue_t, 15%);
+	&:hover {
+		.gradient(darken(@blue_t, 20%), @blue_t);
+		box-shadow: none;
+		cursor: pointer;
+	}
+}
+
+.backButton {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	&:hover { cursor: pointer; }
+}
+// End of Misc
+
+// Icon 32x32
+.icon {
+	background: url("../img/IconSprite.png") no-repeat;
+	background-size: 96px 128px;
+	height: 32px;
+	width: 32px;
+	.center;
+}
+
+.i1 	{ background-position: -000px -000px; 	}
+.i2 	{ background-position: -032px -000px; 	}
+.i3 	{ background-position: -064px -000px; 	}
+.i4 	{ background-position: -000px -032px; 	}
+.i5 	{ background-position: -032px -032px; 	}
+.i6 	{ background-position: -064px -032px; 	}
+.i7 	{ background-position: -000px -064px; 	}
+.i8 	{ background-position: -032px -064px; 	}
+.i9 	{ background-position: -064px -064px; 	}
+.i10 	{ background-position: -000px -096px; 	}
+.i11 	{ background-position: -032px -096px; 	}
+.i12 	{ background-position: -064px -096px; 	}
+
+// Media Queries:
+// Andoid & iPhone
+@media only screen and (max-width:480px){
+	.setting {
+		.row {
+			width: 70%;
+		}
+	}
+}
+
+// Small Android Phone:
+@media only screen and (max-width:240px){
+	.setting {
+		.row {
+			width: 80%;
+		}
+	}
+}
